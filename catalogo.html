@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -14,9 +14,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=block" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap&font-display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="assets/styles.css?v=6">
+  <link rel="stylesheet" href="assets/styles.css?v=19">
   <script src="assets/i18n.js"></script>
 </head>
 <body data-page="catalogo">
@@ -60,28 +60,231 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section catalog-showcase">
       <div class="container">
-        <div class="catalog-tools reveal">
-          <div>
-            <span class="eyebrow">Clasificación</span>
-            <div class="filter-bar" id="filterBar" aria-label="Filtros de catálogo"></div>
-          </div>
-          <label class="catalog-search" for="catalogSearch">
-            <span class="material-symbols-outlined" aria-hidden="true">search</span>
-            <input id="catalogSearch" type="search" placeholder="Buscar por producto, marca o categoría">
-          </label>
+        <div class="catalog-intro reveal">
+          <span class="eyebrow">Categorías</span>
+          <h2>¿Qué productos necesita tu negocio?</h2>
+          <p>Explora las líneas principales del catálogo de Nicamerica Import Corp. con información comercial clara y fotografías reales disponibles.</p>
         </div>
-        <div class="product-grid" id="productGrid"></div>
-        <aside class="catalog-cta reveal">
-          <div><h3>¿Buscas un producto en particular?</h3><p>¿Buscas un producto en particular o quieres conocer nuestra disponibilidad para tu negocio? Contáctanos y con gusto te enviamos más información.</p></div>
-          <a class="button primary" href="contacto.html">Contáctanos</a>
+        <nav class="catalog-category-nav reveal" aria-label="Categorías del catálogo">
+          <a class="category-jump-card" href="#quesos"><img src="assets/products/queso-morolique-duro.jpg" alt=""><span>Quesos</span></a>
+          <a class="category-jump-card" href="#condimentos"><img src="assets/products/briomol-pasta-ajos.jpg" alt=""><span>Condimentos y Salsas</span></a>
+          <a class="category-jump-card" href="#bebidas"><img src="assets/products/rojita-3-litros.jpg" alt=""><span>Bebidas</span></a>
+          <a class="category-jump-card" href="#carnes"><span class="category-icon material-symbols-outlined" aria-hidden="true">restaurant</span><span>Carnes</span></a>
+          <a class="category-jump-card" href="#snacks"><img src="assets/products/vilchez-tinoco-rosquillas.jpg" alt=""><span>Snacks</span></a>
+          <a class="category-jump-card" href="#granos"><span class="category-icon material-symbols-outlined" aria-hidden="true">grocery</span><span>Granos Básicos</span></a>
+          <a class="category-jump-card" href="#congelados"><span class="category-icon material-symbols-outlined" aria-hidden="true">ac_unit</span><span>Productos Congelados</span></a>
+        </nav>
+
+        <article class="catalog-category-section reveal" id="quesos">
+          <div class="catalog-visual-panel">
+            <span class="catalog-category-label">Quesos</span>
+            <img class="catalog-main-photo" src="assets/products/queso-morolique-duro.jpg" alt="Queso nicaragüense en bloque">
+            <div class="catalog-photo-strip" aria-label="Imágenes de quesos">
+              <button class="catalog-thumb is-active" type="button" data-large-src="assets/products/queso-morolique-duro.jpg" data-large-alt="Queso nicaragüense en bloque"><img src="assets/products/queso-morolique-duro.jpg" alt="Ver queso nicaragüense en bloque"></button>
+              <button class="catalog-thumb" type="button" data-large-src="assets/products/queso-morolique-cubos.jpg" data-large-alt="Queso nicaragüense en cubos"><img src="assets/products/queso-morolique-cubos.jpg" alt="Ver queso nicaragüense en cubos"></button>
+            </div>
+          </div>
+          <div class="catalog-category-copy">
+            <h2>Quesos</h2>
+            <p>Productos lácteos tradicionales de Nicaragua, seleccionados para negocios que buscan sabor auténtico y presentación comercial confiable.</p>
+            <div class="catalog-product-stack">
+              <details class="catalog-product-info">
+                <summary><span>Queso Duro Blando / Morolique</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                <p>Queso semiduro tradicional elaborado con leche de vaca semidescremada pasteurizada.</p>
+                <strong>Presentaciones</strong>
+                <ul><li>Bloque 45 lb</li><li>Barra 12 lb</li><li>Presentaciones porcionadas</li><li>1 lb</li><li>12 oz</li></ul>
+              </details>
+              <details class="catalog-product-info">
+                <summary><span>Queso Duro / Madurado / Frijolero / Duro Viejo</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                <p>Queso madurado elaborado con leche de vaca semidescremada pasteurizada.</p>
+                <strong>Presentaciones</strong>
+                <ul><li>Bloque 45 lb</li><li>Barra 12 lb</li><li>Presentaciones porcionadas</li><li>1 lb</li><li>12 oz</li></ul>
+              </details>
+              <details class="catalog-product-info">
+                <summary><span>Quesillo / Queso para Pupusas</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                <p>Queso fresco de pasta hilada, ideal para fundir, con textura cremosa y elaborado con leche de vaca semidescremada pasteurizada.</p>
+                <strong>Presentaciones</strong>
+                <ul><li>Bloque 10 lb</li><li>Barra 5 lb</li><li>1 lb</li><li>12 oz</li></ul>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="catalog-category-section catalog-category-section--reverse reveal" id="condimentos">
+          <div class="catalog-visual-panel">
+            <span class="catalog-category-label">Condimentos y Salsas</span>
+            <img class="catalog-main-photo" src="assets/products/lizano-salsa-original.jpg" alt="Salsa Lizano">
+            <div class="catalog-photo-strip catalog-photo-strip--four" aria-label="Imágenes de condimentos y salsas">
+              <button class="catalog-thumb" type="button" data-large-src="assets/products/briomol-pasta-ajos.jpg" data-large-alt="Pasta de Ajo Briomol"><img src="assets/products/briomol-pasta-ajos.jpg" alt="Ver Pasta de Ajo Briomol"></button>
+              <button class="catalog-thumb" type="button" data-large-src="assets/products/briomol-condimento-achiote.jpg" data-large-alt="Achiote Briomol"><img src="assets/products/briomol-condimento-achiote.jpg" alt="Ver Achiote Briomol"></button>
+              <button class="catalog-thumb is-active" type="button" data-large-src="assets/products/lizano-salsa-original.jpg" data-large-alt="Salsa Lizano"><img src="assets/products/lizano-salsa-original.jpg" alt="Ver Salsa Lizano"></button>
+              <button class="catalog-thumb" type="button" data-large-src="assets/products/lizano-salsa-chile.jpg" data-large-alt="Chile Lizano"><img src="assets/products/lizano-salsa-chile.jpg" alt="Ver Chile Lizano"></button>
+            </div>
+          </div>
+          <div class="catalog-category-copy">
+            <h2>Condimentos y Salsas</h2>
+            <p>Sabores prácticos para cocina centroamericana, adobos, marinados, sopas, guisos y preparación diaria.</p>
+            <div class="catalog-product-stack">
+              <details class="catalog-product-info">
+                <summary><span>Pasta de Ajo Briomol</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                <p>Pasta lista para usar en carnes, aves, mariscos, salsas, adobos y sopas.</p>
+                <strong>Presentación</strong>
+                <ul><li>500 g</li></ul>
+              </details>
+              <details class="catalog-product-info">
+                <summary><span>Achiote Briomol</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                <p>Condimento tradicional para aportar color y sabor a carnes, arroz, sopas y guisos.</p>
+                <strong>Presentación</strong>
+                <ul><li>500 g</li></ul>
+              </details>
+              <details class="catalog-product-info">
+                <summary><span>Salsa Lizano</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                <p>Salsa centroamericana de sabor dulce, ácido y especiado, utilizada como condimento de mesa y cocina.</p>
+                <strong>Presentaciones</strong>
+                <ul><li>700 ml</li><li>280 ml</li></ul>
+              </details>
+              <details class="catalog-product-info">
+                <summary><span>Chile Lizano</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                <p>Salsa picante para acompañar carnes, tacos, mariscos, sopas, frijoles y platos tradicionales.</p>
+                <strong>Presentación</strong>
+                <ul><li>62 g</li></ul>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="catalog-category-section reveal" id="bebidas">
+          <div class="catalog-visual-panel">
+            <span class="catalog-category-label">Bebidas</span>
+            <img class="catalog-main-photo" src="assets/products/rojita-3-litros.jpg" alt="Bebida La Rojita">
+            <div class="catalog-photo-strip" aria-label="Imágenes de bebidas">
+              <button class="catalog-thumb is-active" type="button" data-large-src="assets/products/rojita-3-litros.jpg" data-large-alt="Bebida La Rojita"><img src="assets/products/rojita-3-litros.jpg" alt="Ver bebida La Rojita"></button>
+              <button class="catalog-thumb" type="button" data-large-src="assets/products/coca-cola-1-litro.jpg" data-large-alt="Coca-Cola de Nicaragua"><img src="assets/products/coca-cola-1-litro.jpg" alt="Ver Coca-Cola de Nicaragua"></button>
+            </div>
+          </div>
+          <div class="catalog-category-copy">
+            <h2>Bebidas</h2>
+            <p>Refrescos reconocidos por consumidores nicaragüenses, pensados para tiendas, restaurantes y distribución especializada.</p>
+            <div class="catalog-product-stack">
+              <details class="catalog-product-info">
+                <summary><span>Kola Shaler</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                <p>Bebida gaseosa nicaragüense producida desde 1904, reconocida por generaciones por su sabor característico.</p>
+                <strong>Presentaciones</strong>
+                <ul><li>355 ml / 12 oz</li><li>473 ml / 16 oz</li><li>2 L</li></ul>
+              </details>
+              <details class="catalog-product-info">
+                <summary><span>La Rojita</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                <p>Gaseosa roja nicaragüense de sabor tradicional.</p>
+                <strong>Presentaciones</strong>
+                <ul><li>500 ml / 16.9 oz</li><li>1.5 L</li><li>3 L</li></ul>
+              </details>
+              <details class="catalog-product-info">
+                <summary><span>Coca-Cola</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                <p>Coca-Cola producida en Nicaragua.</p>
+                <strong>Presentaciones</strong>
+                <ul><li>355 ml / 12 oz botella de vidrio</li><li>500 ml / 16.9 oz botella de vidrio</li></ul>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="catalog-category-section catalog-category-section--reverse reveal" id="carnes">
+          <div class="catalog-visual-panel catalog-visual-panel--pending">
+            <span class="catalog-category-label">Carnes</span>
+            <div class="catalog-pending-photo">
+              <span class="material-symbols-outlined" aria-hidden="true">photo_camera</span>
+              <strong>Fotografía pendiente</strong>
+              <p>Espacio reservado para integrar la imagen real del producto.</p>
+            </div>
+          </div>
+          <div class="catalog-category-copy">
+            <h2>Carnes</h2>
+            <p>Selección para clientes comerciales que necesitan cortes de calidad dentro de una oferta de importación confiable.</p>
+            <div class="catalog-product-stack">
+              <details class="catalog-product-info">
+                <summary><span>Cortes Especiales</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                <p>Carne de calidad premium en diferentes cortes.</p>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="catalog-category-section reveal" id="snacks">
+          <div class="catalog-visual-panel">
+            <span class="catalog-category-label">Snacks</span>
+            <img class="catalog-main-photo" src="assets/products/vilchez-tinoco-rosquillas.jpg" alt="Rosquillas Vilchez Tinoco">
+          </div>
+          <div class="catalog-category-copy">
+            <h2>Snacks</h2>
+            <p>Productos horneados tradicionales para anaquel, compra familiar y consumidores que buscan sabores nicaragüenses.</p>
+            <div class="catalog-product-stack">
+              <details class="catalog-product-info">
+                <summary><span>Rosquillas / Hojaldras</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                <p>Productos horneados tradicionales elaborados con maíz y queso.</p>
+                <strong>Presentaciones</strong>
+                <ul><li>110 g / 3.88 oz individual</li><li>220 g / 7.76 oz mediano</li><li>560 g / 19.75 oz familiar</li></ul>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="catalog-category-section catalog-category-section--reverse reveal" id="granos">
+          <div class="catalog-visual-panel catalog-visual-panel--pending">
+            <span class="catalog-category-label">Granos Básicos</span>
+            <div class="catalog-pending-photo">
+              <span class="material-symbols-outlined" aria-hidden="true">photo_camera</span>
+              <strong>Fotografía pendiente</strong>
+              <p>Espacio reservado para integrar la imagen real del producto.</p>
+            </div>
+          </div>
+          <div class="catalog-category-copy">
+            <h2>Granos Básicos</h2>
+            <p>Productos esenciales para distribución, restaurantes y negocios especializados en alimentos centroamericanos.</p>
+            <div class="catalog-product-stack">
+              <details class="catalog-product-info">
+                <summary><span>Frijol Rojo Seda</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                <p>Frijol rojo de Nicaragua seleccionado por su calidad, sabor y rendimiento.</p>
+                <strong>Presentación</strong>
+                <ul><li>50 lb</li></ul>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="catalog-category-section reveal" id="congelados">
+          <div class="catalog-visual-panel catalog-visual-panel--pending">
+            <span class="catalog-category-label">Productos Congelados</span>
+            <div class="catalog-pending-photo">
+              <span class="material-symbols-outlined" aria-hidden="true">photo_camera</span>
+              <strong>Fotografía pendiente</strong>
+              <p>Espacio reservado para integrar la imagen real del producto.</p>
+            </div>
+          </div>
+          <div class="catalog-category-copy">
+            <h2>Productos Congelados</h2>
+            <div class="catalog-product-stack">
+              <details class="catalog-product-info catalog-product-info--simple">
+                <summary><span>Yuca Congelada</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <aside class="catalog-final-cta reveal">
+          <div>
+            <span class="eyebrow">Disponibilidad</span>
+            <h2>¿Buscas un producto en particular?</h2>
+            <p>¿Quieres conocer nuestra disponibilidad o necesitas información para tu negocio? Contáctanos y con gusto te brindaremos más información.</p>
+          </div>
+          <a class="button primary" href="contacto.html">Consultar disponibilidad</a>
         </aside>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+    <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
         <div class="footer-logo-lockup" aria-label="Nicamerica Import Corp.">
@@ -89,6 +292,15 @@
           <img class="footer-logo-text" src="assets/nicamerica-texto-white.png" alt="Nicamerica Import Corp.">
         </div>
         <p data-i18n="footer.tagline">Conectamos la tradición y calidad de Nicaragua con clientes y negocios en Estados Unidos.</p>
+        <div class="footer-social" aria-label="Redes sociales">
+          <strong data-i18n="footer.social">Redes</strong>
+          <div class="footer-social-links">
+            <a class="footer-social-link" href="#" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
+            <a class="footer-social-link" href="#" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a class="footer-social-link" href="#" aria-label="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.04.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+            <a class="footer-social-link" href="https://wa.me/17869393377" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.18-.48-.3z"/></svg></a>
+          </div>
+        </div>
       </div>
       <nav class="footer-nav" aria-label="Navegación de pie de página">
         <strong data-i18n="footer.links">Enlaces</strong>

@@ -282,7 +282,31 @@ function observeReveals() {
   document.querySelectorAll(".reveal:not(.visible)").forEach((item) => revealObserver.observe(item));
 }
 
+function setupCatalogThumbs() {
+  document.querySelectorAll(".catalog-thumb").forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      const panel = thumb.closest(".catalog-visual-panel");
+      const mainImage = panel?.querySelector(".catalog-main-photo");
+      const nextSrc = thumb.dataset.largeSrc;
+      const nextAlt = thumb.dataset.largeAlt || thumb.querySelector("img")?.alt || "";
+
+      if (!mainImage || !nextSrc || mainImage.getAttribute("src") === nextSrc) return;
+
+      panel.querySelectorAll(".catalog-thumb").forEach((item) => item.classList.remove("is-active"));
+      thumb.classList.add("is-active");
+      mainImage.classList.add("is-changing");
+
+      window.setTimeout(() => {
+        mainImage.src = nextSrc;
+        mainImage.alt = nextAlt;
+        mainImage.classList.remove("is-changing");
+      }, 120);
+    });
+  });
+}
+
 renderFeatured();
 renderFilters();
 renderProducts();
+setupCatalogThumbs();
 observeReveals();
