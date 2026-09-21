@@ -5,30 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Catálogo | Nicamerica Import Corp.</title>
   <meta name="description" content="Catálogo visual de productos de Nicamerica Import Corp. con fotografías reales e información verificable.">
-  <meta name="theme-color" content="#002E5D">
-  <link rel="canonical" href="https://nicamericaimport.com/catalogo.html">
+  <meta name="theme-color" content="#041b45">
+  <meta property="og:title" content="Nicamerica Import Corp. | Inicio">
+  <meta property="og:description" content="Productos auténticos, logística confiable y atención comercial para clientes y negocios en Estados Unidos.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_US">
+  <link rel="canonical" href="https://nicamericaimport.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=block" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="assets/styles.css?v=2">
+  <link rel="stylesheet" href="assets/styles.css?v=6">
+  <script src="assets/i18n.js"></script>
 </head>
 <body data-page="catalogo">
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Ir al inicio"><img class="brand-isotipo" src="assets/nicamerica-isotipo.png" alt=""><img class="brand-texto" src="assets/nicamerica-texto.png" alt="Nicamerica Import Corp."></a>
-      <nav class="desktop-nav" aria-label="Navegación principal"><a href="index.html" data-page-link="inicio">Inicio</a><a href="nosotros.html" data-page-link="nosotros">Nosotros</a><a href="catalogo.html" data-page-link="catalogo">Catálogo</a><a href="servicios.html" data-page-link="servicios">Servicios</a><a href="contacto.html" data-page-link="contacto">Contacto</a></nav>
-      <div class="header-actions"><a class="button primary compact" href="catalogo.html"><span class="material-symbols-outlined" aria-hidden="true">inventory_2</span>Catálogo</a><button class="icon-button" id="menuButton" type="button" aria-label="Abrir menú" aria-controls="mobileNav" aria-expanded="false"><span class="material-symbols-outlined" aria-hidden="true">menu</span></button></div>
+      <a class="brand" href="index.html" data-i18n-aria="nav.brand_label" aria-label="Ir al inicio">
+        <img class="brand-isotipo" src="assets/nicamerica-isotipo-white.png" alt="">
+        <img class="brand-texto" src="assets/nicamerica-texto-white.png" alt="Nicamerica Import Corp.">
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="index.html" data-page-link="inicio" data-i18n="nav.home">Inicio</a>
+        <a href="nosotros.html" data-page-link="nosotros" data-i18n="nav.about">Nosotros</a>
+        <a href="catalogo.html" data-page-link="catalogo" data-i18n="nav.catalog">Catálogo</a>
+        <a href="servicios.html" data-page-link="servicios" data-i18n="nav.services">Servicios</a>
+        <a href="contacto.html" data-page-link="contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Cambiar a inglés" title="Switch to English" onclick="window.i18n.toggleLang()">
+          <span class="lang-globe material-symbols-outlined" aria-hidden="true">language</span>
+          <span class="lang-label">EN</span>
+        </button>
+        <a class="button primary compact" href="catalogo.html"><span class="material-symbols-outlined" aria-hidden="true">inventory_2</span><span data-i18n="nav.catalog_btn">Catálogo</span></a>
+        <button class="icon-button" id="menuButton" type="button" data-i18n-aria="nav.open_menu" aria-label="Abrir menú" aria-controls="mobileNav" aria-expanded="false"><span class="material-symbols-outlined" aria-hidden="true">menu</span></button>
+      </div>
     </div>
-    <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil"><a href="index.html" data-page-link="inicio">Inicio</a><a href="nosotros.html" data-page-link="nosotros">Nosotros</a><a href="catalogo.html" data-page-link="catalogo">Catálogo</a><a href="servicios.html" data-page-link="servicios">Servicios</a><a href="contacto.html" data-page-link="contacto">Contacto</a></nav>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+      <a href="index.html" data-page-link="inicio" data-i18n="nav.home">Inicio</a>
+      <a href="nosotros.html" data-page-link="nosotros" data-i18n="nav.about">Nosotros</a>
+      <a href="catalogo.html" data-page-link="catalogo" data-i18n="nav.catalog">Catálogo</a>
+      <a href="servicios.html" data-page-link="servicios" data-i18n="nav.services">Servicios</a>
+      <a href="contacto.html" data-page-link="contacto" data-i18n="nav.contact">Contacto</a>
+    </nav>
   </header>
 
   <main>
     <section class="page-hero page-hero--catalogo">
       <div class="container section-copy reveal">
-        <span class="eyebrow">Catálogo</span>
-        <h1>Nuestro catálogo</h1>
-        <p class="lead">Contamos con una selecta variedad de productos cuidadosamente escogidos por su calidad y autenticidad. Cada producto se presenta con fotografías reales y sin información no verificada.</p>
+        <span class="eyebrow" data-i18n="catalog.hero.eyebrow">Catálogo</span>
+        <h1 data-i18n="catalog.hero.title">Nuestro catálogo</h1>
+        <p class="lead" data-i18n="catalog.hero.lead">Contamos con una selecta variedad de productos cuidadosamente escogidos por su calidad y autenticidad. Cada producto se presenta con fotografías reales y sin información no verificada.</p>
       </div>
     </section>
 
@@ -54,19 +82,43 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid"><div class="footer-brand"><img class="footer-logo" src="assets/nicamerica-logo.png" alt="Nicamerica Import Corp."><p>Conectamos la tradición y calidad de Nicaragua con clientes y negocios en Estados Unidos.</p></div><nav class="footer-nav" aria-label="Navegación de pie de página"><strong>Enlaces</strong><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="catalogo.html">Catálogo</a><a href="servicios.html">Servicios</a><a href="contacto.html">Contacto</a></nav><div class="footer-contact"><strong>Contacto</strong><p><span class="material-symbols-outlined" aria-hidden="true">location_on</span><span>14331 SW 120 St. Unit #106<br>Miami, Florida 33186</span></p><a href="tel:+17869393377"><span class="material-symbols-outlined" aria-hidden="true">call</span>+1 (786) 939-3377</a><a href="tel:+13059224529"><span class="material-symbols-outlined" aria-hidden="true">call</span>+1 (305) 922-4529</a><a href="mailto:sales@nicamericaimport.com"><span class="material-symbols-outlined" aria-hidden="true">mail</span>sales@nicamericaimport.com</a></div><div class="footer-social"><strong>Redes</strong><div style="display: flex; gap: 14px; margin-top: 14px;"><a href="#" aria-label="Instagram" style="color: inherit;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a><a href="#" aria-label="LinkedIn" style="color: inherit;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a href="#" aria-label="Facebook" style="color: inherit;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a><a href="#" aria-label="YouTube" style="color: inherit;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a><a href="#" aria-label="TikTok" style="color: inherit;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg></a></div></div></div>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-lockup" aria-label="Nicamerica Import Corp.">
+          <img class="footer-logo-mark" src="assets/nicamerica-isotipo-white.png" alt="">
+          <img class="footer-logo-text" src="assets/nicamerica-texto-white.png" alt="Nicamerica Import Corp.">
+        </div>
+        <p data-i18n="footer.tagline">Conectamos la tradición y calidad de Nicaragua con clientes y negocios en Estados Unidos.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegación de pie de página">
+        <strong data-i18n="footer.links">Enlaces</strong>
+        <a href="index.html" data-i18n="nav.home">Inicio</a>
+        <a href="nosotros.html" data-i18n="nav.about">Nosotros</a>
+        <a href="catalogo.html" data-i18n="nav.catalog">Catálogo</a>
+        <a href="servicios.html" data-i18n="nav.services">Servicios</a>
+        <a href="contacto.html" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="footer-contact">
+        <strong data-i18n="footer.contact">Contacto</strong>
+        <p><span class="material-symbols-outlined" aria-hidden="true">location_on</span><span>14331 SW 120 St. Unit #106<br>Miami, Florida 33186</span></p>
+        <a href="tel:+17869393377"><span class="material-symbols-outlined" aria-hidden="true">call</span>+1 (786) 939-3377</a>
+        <a href="tel:+13059224529"><span class="material-symbols-outlined" aria-hidden="true">call</span>+1 (305) 922-4529</a>
+        <a href="mailto:sales@nicamericaimport.com"><span class="material-symbols-outlined" aria-hidden="true">mail</span>sales@nicamericaimport.com</a>
+      </div>
+    </div>
     <div class="container copyright" id="copyright"></div>
   </footer>
 
   <div class="modal" id="productModal" aria-hidden="true">
     <div class="modal-backdrop" data-close-modal></div>
     <article class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" type="button" aria-label="Cerrar detalle" data-close-modal><span class="material-symbols-outlined" aria-hidden="true">close</span></button>
+      <button class="modal-close" type="button" data-i18n-aria="modal.close" aria-label="Cerrar detalle" data-close-modal><span class="material-symbols-outlined" aria-hidden="true">close</span></button>
       <div class="modal-image"><img id="modalImage" alt=""></div>
-      <div class="modal-content"><span class="pill" id="modalCategory"></span><h2 id="modalTitle"></h2><div class="detail-list" id="modalDetails"></div><a class="button primary" href="contacto.html" data-close-modal>Consultar disponibilidad</a></div>
+      <div class="modal-content"><span class="pill" id="modalCategory"></span><h2 id="modalTitle"></h2><div class="detail-list" id="modalDetails"></div><a class="button primary" href="contacto.html" data-close-modal data-i18n="modal.cta">Consultar disponibilidad</a></div>
     </article>
   </div>
   <script src="assets/app.js"></script>
+  <script>document.addEventListener('langchange', () => window.i18n.applyTranslations());</script>
 </body>
 </html>
 
