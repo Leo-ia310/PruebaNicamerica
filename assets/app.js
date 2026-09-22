@@ -5,6 +5,8 @@ const products = [
     brand: "La Bendición Foods",
     category: "Lácteos",
     origin: "Producto de Nicaragua",
+    description: "Queso semiduro tradicional elaborado con leche 100% de vaca semidescremada pasteurizada.",
+    presentation: "45 lb, 12 lb, porcionado, 1 lb, 12 oz",
     image: "assets/products/queso-morolique.jpg"
   },
   {
@@ -13,14 +15,27 @@ const products = [
     brand: "La Bendición Foods",
     category: "Lácteos",
     origin: "Producto de Nicaragua",
+    description: "Queso madurado tradicional elaborado con leche 100% de vaca semidescremada.",
+    presentation: "45 lb, 12 lb, porcionado, 1 lb, 12 oz",
     image: "assets/products/queso-morolique-duro.jpg"
   },
   {
+    id: "quesillo-pupusas",
+    name: "Quesillo / Queso para Pupusas",
+    brand: "La Bendición Foods",
+    category: "Lácteos",
+    origin: "Producto de Nicaragua",
+    description: "Queso fresco de pasta hilada para fundir, cremoso y de sabor natural intenso.",
+    presentation: "10 lb, 5 lb, 1 lb, 12 oz",
+    image: "assets/products/queso-morolique-cubos.jpg"
+  },
+  {
     id: "briomol-pasta-ajos",
-    name: "Pasta de Ajos",
+    name: "Pasta de Ajo",
     brand: "Briomol",
     category: "Condimentos",
     origin: "Estelí, Nicaragua",
+    description: "Pasta lista para usar en carnes, aves, mariscos, salsas, adobos y sopas.",
     presentation: "500 g",
     image: "assets/products/briomol-pasta-ajos.jpg"
   },
@@ -30,6 +45,7 @@ const products = [
     brand: "Briomol",
     category: "Condimentos",
     origin: "Estelí, Nicaragua",
+    description: "Condimento para dar color, sabor y autenticidad a platillos tradicionales.",
     presentation: "500 g",
     image: "assets/products/briomol-condimento-achiote.jpg"
   },
@@ -38,7 +54,8 @@ const products = [
     name: "Salsa Original",
     brand: "Lizano",
     category: "Salsas",
-    presentation: "700 ml",
+    description: "Salsa centroamericana con notas dulces, ácidas y especiadas.",
+    presentation: "700 ml, 280 ml",
     image: "assets/products/lizano-salsa-original.jpg"
   },
   {
@@ -46,14 +63,28 @@ const products = [
     name: "Salsa de Chile",
     brand: "Lizano",
     category: "Salsas",
+    description: "Salsa Lizano con toque picante balanceado.",
+    presentation: "62 g",
     image: "assets/products/lizano-salsa-chile.jpg"
+  },
+  {
+    id: "kola-shaler",
+    name: "Kola Shaler",
+    brand: "Kola Shaler",
+    category: "Bebidas",
+    origin: "Producto de Nicaragua",
+    description: "Bebida gaseosa emblemática de Nicaragua, elaborada desde 1904.",
+    presentation: "355 ml, 473 ml, 2 L",
+    icon: "local_drink"
   },
   {
     id: "coca-cola-1-litro",
     name: "Coca-Cola",
     brand: "Coca-Cola",
     category: "Bebidas",
-    presentation: "1 litro",
+    origin: "Producto de Nicaragua",
+    description: "Bebida refrescante elaborada en Nicaragua.",
+    presentation: "355 ml vidrio, 500 ml vidrio",
     image: "assets/products/coca-cola-1-litro.jpg"
   },
   {
@@ -61,7 +92,9 @@ const products = [
     name: "Rojita",
     brand: "Rojita",
     category: "Bebidas",
-    presentation: "3 litros",
+    origin: "Producto de Nicaragua",
+    description: "Gaseosa roja nicaragüense de sabor tradicional.",
+    presentation: "500 ml, 1.5 L, 3 L",
     image: "assets/products/rojita-3-litros.jpg"
   },
   {
@@ -69,8 +102,19 @@ const products = [
     name: "Rosquillas somoteñas",
     brand: "Vílchez Tinoco",
     category: "Snacks",
-    presentation: "560 g",
+    description: "Rosquillas y hojaldras tradicionales horneadas, elaboradas con maíz y queso.",
+    presentation: "110 g, 220 g, 560 g",
     image: "assets/products/vilchez-tinoco-rosquillas.jpg"
+  },
+  {
+    id: "frijol-rojo-seda",
+    name: "Frijol Rojo Seda",
+    brand: "Nicamerica",
+    category: "Granos Básicos",
+    origin: "Producto de Nicaragua",
+    description: "Frijol rojo de alta calidad, cultivado en Nicaragua y seleccionado por su sabor, rendimiento, suavidad y tradición.",
+    presentation: "50 lb",
+    icon: "grocery"
   }
 ];
 
@@ -88,6 +132,7 @@ const modalCategory = document.getElementById("modalCategory");
 const modalDetails = document.getElementById("modalDetails");
 const form = document.getElementById("contactForm");
 const status = document.getElementById("formStatus");
+const transparentPixel = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
 
 const currentPage = document.body.dataset.page;
 document.querySelectorAll("[data-page-link]").forEach((link) => {
@@ -122,10 +167,11 @@ function productCard(product) {
   button.dataset.productId = product.id;
   button.dataset.category = product.category;
   button.setAttribute("aria-label", `Ver detalle de ${product.name}`);
+  const media = product.image
+    ? `<img src="${product.image}" alt="${product.name}${product.brand ? " - " + product.brand : ""}" loading="lazy">`
+    : `<div class="product-media-placeholder"><span class="material-symbols-outlined" aria-hidden="true">${product.icon || "inventory_2"}</span><strong>Imagen pendiente</strong></div>`;
   button.innerHTML = `
-    <div class="product-media">
-      <img src="${product.image}" alt="${product.name}${product.brand ? " - " + product.brand : ""}" loading="lazy">
-    </div>
+    <div class="product-media">${media}</div>
     <div class="product-body">
       <span class="pill">${product.category}</span>
       <h3>${product.name}</h3>
@@ -169,7 +215,7 @@ function renderProducts() {
 function renderFeatured() {
   if (!featuredGrid) return;
   featuredGrid.innerHTML = "";
-  ["queso-morolique-duro", "briomol-condimento-achiote", "vilchez-tinoco-rosquillas"]
+  ["queso-morolique-duro", "briomol-condimento-achiote", "frijol-rojo-seda"]
     .map((id) => products.find((product) => product.id === id))
     .filter(Boolean)
     .forEach((product) => featuredGrid.appendChild(productCard(product)));
@@ -203,8 +249,9 @@ function openProduct(id) {
   const product = products.find((item) => item.id === id);
   if (!product || !modal) return;
 
-  modalImage.src = product.image;
-  modalImage.alt = `${product.name}${product.brand ? " - " + product.brand : ""}`;
+  modalImage.src = product.image || transparentPixel;
+  modalImage.alt = product.image ? `${product.name}${product.brand ? " - " + product.brand : ""}` : "";
+  modalImage.closest(".modal-image")?.classList.toggle("is-placeholder", !product.image);
   modalTitle.textContent = product.name;
   modalCategory.textContent = product.category;
 
@@ -212,7 +259,8 @@ function openProduct(id) {
     ["Marca", product.brand],
     ["Categoría", product.category],
     ["Presentación", product.presentation],
-    ["Origen visible", product.origin]
+    ["Origen visible", product.origin],
+    ["Descripción", product.description]
   ].filter(([, value]) => Boolean(value));
 
   modalDetails.innerHTML = details
@@ -305,8 +353,44 @@ function setupCatalogThumbs() {
   });
 }
 
+function setupPlantCarousel() {
+  document.querySelectorAll(".plant-carousel").forEach((carousel) => {
+    const slides = Array.from(carousel.querySelectorAll(".plant-carousel-slide"));
+    const dotsWrap = carousel.querySelector(".plant-carousel-dots");
+    const prev = carousel.querySelector('[data-plant-carousel="prev"]');
+    const next = carousel.querySelector('[data-plant-carousel="next"]');
+    if (!slides.length || !dotsWrap) return;
+
+    let active = slides.findIndex((slide) => slide.classList.contains("is-active"));
+    if (active < 0) active = 0;
+
+    const dots = slides.map((_, index) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("aria-label", `Ver foto ${index + 1}`);
+      dot.addEventListener("click", () => show(index));
+      dotsWrap.appendChild(dot);
+      return dot;
+    });
+
+    function show(index) {
+      active = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => slide.classList.toggle("is-active", slideIndex === active));
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle("is-active", dotIndex === active);
+        dot.setAttribute("aria-current", dotIndex === active ? "true" : "false");
+      });
+    }
+
+    prev?.addEventListener("click", () => show(active - 1));
+    next?.addEventListener("click", () => show(active + 1));
+    show(active);
+  });
+}
+
 renderFeatured();
 renderFilters();
 renderProducts();
 setupCatalogThumbs();
+setupPlantCarousel();
 observeReveals();
