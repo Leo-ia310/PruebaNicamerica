@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
 
 <head>
@@ -21,42 +21,36 @@
     rel="stylesheet">
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="assets/styles.css?v=25">
+  <script src="assets/i18n.js"></script>
 </head>
 
 <body data-page="inicio">
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Ir al inicio">
-        <img class="brand-isotipo" src="assets/nicamerica-isotipo.png" alt="">
-        <img class="brand-texto" src="assets/nicamerica-texto.png" alt="Nicamerica Import Corp.">
-      </a>
-      <nav class="desktop-nav" aria-label="Navegación principal">
-        <a href="index.html" data-page-link="inicio">Inicio</a>
-        <a href="nosotros.html" data-page-link="nosotros">Nosotros</a>
-        <a href="catalogo.html" data-page-link="catalogo">Catálogo</a>
-        <a href="servicios.html" data-page-link="servicios">Servicios</a>
-        <a href="contacto.html" data-page-link="contacto">Contacto</a>
-      </nav>
-      <div class="header-actions">
-        <button class="lang-toggle" type="button" aria-label="Cambiar idioma a inglés">
-          <span class="material-symbols-outlined lang-globe" aria-hidden="true">language</span>
-          <span class="lang-label">EN</span>
-        </button>
-        <a class="button primary compact header-catalog" href="catalogo.html">
-          <span class="material-symbols-outlined" aria-hidden="true">inventory_2</span>
-          <span>Catálogo</span>
-        </a>
-        <button class="icon-button" id="menuButton" type="button" aria-label="Abrir menú" aria-controls="mobileNav"
-          aria-expanded="false"><span class="material-symbols-outlined" aria-hidden="true">menu</span></button>
-      </div>
+      <a class="brand" href="index.html" data-i18n-aria="nav.brand_label" aria-label="Ir al inicio"><img
+          class="brand-isotipo" src="assets/nicamerica-isotipo-white.png" alt=""><img class="brand-texto"
+          src="assets/nicamerica-texto-white.png" alt="Nicamerica Import Corp."></a>
+      <nav class="desktop-nav" aria-label="Navegación principal"><a href="index.html" data-page-link="inicio"
+          data-i18n="nav.home">Inicio</a><a href="nosotros.html" data-page-link="nosotros"
+          data-i18n="nav.about">Nosotros</a><a href="catalogo.html" data-page-link="catalogo"
+          data-i18n="nav.catalog">Catálogo</a><a href="servicios.html" data-page-link="servicios"
+          data-i18n="nav.services">Servicios</a><a href="contacto.html" data-page-link="contacto"
+          data-i18n="nav.contact">Contacto</a></nav>
+      <div class="header-actions"><button class="lang-toggle" id="langToggle" type="button"
+          aria-label="Cambiar a inglés" title="Switch to English" onclick="window.i18n.toggleLang()"><span
+            class="lang-globe material-symbols-outlined" aria-hidden="true">language</span><span
+            class="lang-label">EN</span></button><a class="button primary compact" href="catalogo.html"><span
+            class="material-symbols-outlined" aria-hidden="true">inventory_2</span><span
+            data-i18n="nav.catalog_btn">Catálogo</span></a><button class="icon-button" id="menuButton" type="button"
+          data-i18n-aria="nav.open_menu" aria-label="Abrir menú" aria-controls="mobileNav" aria-expanded="false"><span
+            class="material-symbols-outlined" aria-hidden="true">menu</span></button></div>
     </div>
-    <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
-      <a href="index.html" data-page-link="inicio">Inicio</a>
-      <a href="nosotros.html" data-page-link="nosotros">Nosotros</a>
-      <a href="catalogo.html" data-page-link="catalogo">Catálogo</a>
-      <a href="servicios.html" data-page-link="servicios">Servicios</a>
-      <a href="contacto.html" data-page-link="contacto">Contacto</a>
-    </nav>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil"><a href="index.html" data-page-link="inicio"
+        data-i18n="nav.home">Inicio</a><a href="nosotros.html" data-page-link="nosotros"
+        data-i18n="nav.about">Nosotros</a><a href="catalogo.html" data-page-link="catalogo"
+        data-i18n="nav.catalog">Catálogo</a><a href="servicios.html" data-page-link="servicios"
+        data-i18n="nav.services">Servicios</a><a href="contacto.html" data-page-link="contacto"
+        data-i18n="nav.contact">Contacto</a></nav>
   </header>
 
   <main>
@@ -64,13 +58,13 @@
       <div class="hero-background" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <div class="hero-kicker">Comercio internacional &amp; herencia productiva</div>
-          <h1 id="hero-title">Sabores de Nicaragua, <span>directo a tu mesa</span></h1>
-          <p class="lead">Productos auténticos. Historias reales. Una conexión construida sobre calidad, trazabilidad y
+          <div class="hero-kicker" data-i18n="index.hero.kicker">Comercio internacional &amp; herencia productiva</div>
+          <h1 id="hero-title" data-i18n-html="index.hero.title">Sabores de Nicaragua, <span>directo a tu mesa</span></h1>
+          <p class="lead" data-i18n="index.hero.lead">Productos auténticos. Historias reales. Una conexión construida sobre calidad, trazabilidad y
             confianza comercial.</p>
           <div class="hero-actions">
-            <a class="button primary" href="nosotros.html">Descubrir Nicamerica</a>
-            <a class="button secondary" href="catalogo.html">Explorar productos</a>
+            <a class="button primary" href="nosotros.html" data-i18n="index.hero.cta1">Descubrir Nicamerica</a>
+            <a class="button secondary" href="catalogo.html" data-i18n="index.hero.cta2">Explorar productos</a>
           </div>
         </div>
       </div>
@@ -78,14 +72,14 @@
 
     <section class="metadata-strip" aria-label="Registro comercial de Nicamerica">
       <div class="container metadata-grid">
-        <div><span class="material-symbols-outlined" aria-hidden="true">location_on</span><strong>SEDE
-            OPERATIVA:</strong><span>MIAMI, FLORIDA</span></div>
+        <div><span class="material-symbols-outlined" aria-hidden="true">location_on</span><strong data-i18n="strip.hq">SEDE
+            OPERATIVA:</strong><span data-i18n="strip.hq_val">MIAMI, FLORIDA</span></div>
         <div><span class="material-symbols-outlined"
-            aria-hidden="true">storefront</span><strong>DIRECCIÓN:</strong><span>14331 SW 120 ST. UNIT #106</span></div>
+            aria-hidden="true">storefront</span><strong data-i18n="strip.addr">DIRECCIÓN:</strong><span data-i18n="strip.addr_val">14331 SW 120 ST. UNIT #106</span></div>
         <div><span class="material-symbols-outlined"
-            aria-hidden="true">photo_camera</span><strong>CATÁLOGO:</strong><span>FOTOGRAFÍAS REALES</span></div>
-        <div><span class="material-symbols-outlined" aria-hidden="true">verified</span><strong>ESTADO:</strong><span
-            class="status-dot">ACTIVO</span></div>
+            aria-hidden="true">photo_camera</span><strong data-i18n="strip.catalog">CATÁLOGO:</strong><span data-i18n="strip.catalog_val">FOTOGRAFÍAS REALES</span></div>
+        <div><span class="material-symbols-outlined" aria-hidden="true">verified</span><strong data-i18n="strip.status">ESTADO:</strong><span
+            class="status-dot" data-i18n="strip.status_val">ACTIVO</span></div>
       </div>
     </section>
 
@@ -94,20 +88,20 @@
         <article class="value-card reveal"><img src="assets/products/queso-morolique-duro.jpg"
             alt="Producto nicaragüense de Nicamerica"><span class="material-symbols-outlined"
             aria-hidden="true">verified</span>
-          <h2>Productos auténticos</h2>
-          <p>Origen 100% nicaragüense, seleccionado con cuidado.</p>
+          <h2 data-i18n="index.value1.title">Productos auténticos</h2>
+          <p data-i18n="index.value1.text">Origen 100% nicaragüense, seleccionado con cuidado.</p>
         </article>
-        <article class="value-card reveal"><img src="assets/products/hero-productos.jpg"
+        <article class="value-card reveal"><img src="assets/stock/contenedores-puerto.jpg"
             alt="Selección visual de productos importados"><span class="material-symbols-outlined"
             aria-hidden="true">local_shipping</span>
-          <h2>Importación confiable</h2>
-          <p>Procesos de logística y calidad garantizados en cada envío.</p>
+          <h2 data-i18n="index.value2.title">Importación confiable</h2>
+          <p data-i18n="index.value2.text">Procesos de logística y calidad garantizados en cada envío.</p>
         </article>
-        <article class="value-card reveal"><img src="assets/products/vilchez-tinoco-rosquillas.jpg"
+        <article class="value-card reveal"><img src="assets/stock/atencion-cercana-latina.png"
             alt="Producto para atención comercial de Nicamerica"><span class="material-symbols-outlined"
             aria-hidden="true">support_agent</span>
-          <h2>Atención cercana</h2>
-          <p>Acompañamiento personalizado para clientes y socios comerciales.</p>
+          <h2 data-i18n="index.value3.title">Atención cercana</h2>
+          <p data-i18n="index.value3.text">Acompañamiento personalizado para clientes y socios comerciales.</p>
         </article>
       </div>
     </section>
@@ -115,17 +109,17 @@
     <section class="section intro-band">
       <div class="container intro-layout">
         <div class="section-copy reveal">
-          <span class="eyebrow light">Nuestro papel</span>
-          <h2>Un puente comercial con raíces claras.</h2>
-          <p>Somos el puente entre el talento y la tradición de Nicaragua y el mercado estadounidense. Trabajamos junto
+          <span class="eyebrow light" data-i18n="index.intro.eyebrow">Nuestro papel</span>
+          <h2 data-i18n="index.intro.title">Un puente comercial con raíces claras.</h2>
+          <p data-i18n="index.intro.text">Somos el puente entre el talento y la tradición de Nicaragua y el mercado estadounidense. Trabajamos junto
             a productores locales para llevar productos genuinos a nuestros clientes, con altos estándares de calidad y
             un servicio pensado para generar confianza y relaciones comerciales duraderas.</p>
-          <div class="section-action"><a class="button secondary" href="nosotros.html">Conoce la empresa</a></div>
+          <div class="section-action"><a class="button secondary" href="nosotros.html" data-i18n="index.intro.cta">Conoce la empresa</a></div>
         </div>
         <figure class="plant-photo dark reveal">
-          <img src="assets/plant/plant-overview.jpg"
+          <img src="assets/plant/plant-equipment.jpg"
             alt="Área de planta con equipo de producción y revisión de productos">
-          <figcaption>Área de producción y revisión</figcaption>
+          <figcaption data-i18n="index.intro.figcaption">Área de producción y revisión</figcaption>
         </figure>
       </div>
     </section>
@@ -133,13 +127,13 @@
     <section class="section featured-section">
       <div class="container">
         <div class="section-header reveal">
-          <span class="eyebrow">Selección visual</span>
-          <h2>Conoce algunos de nuestros productos</h2>
-          <p class="lead">Una muestra de productos fotografiados para construir el catálogo. No se incluyen precios,
+          <span class="eyebrow" data-i18n="index.featured.eyebrow">Selección visual</span>
+          <h2 data-i18n="index.featured.title">Conoce algunos de nuestros productos</h2>
+          <p class="lead" data-i18n="index.featured.lead">Una muestra de productos fotografiados para construir el catálogo. No se incluyen precios,
             disponibilidad ni afirmaciones no verificadas.</p>
         </div>
         <div class="product-grid featured-grid" id="featuredGrid"></div>
-        <div class="section-action reveal"><a class="button primary" href="catalogo.html">Ver catálogo completo</a>
+        <div class="section-action reveal"><a class="button primary" href="catalogo.html" data-i18n="index.featured.cta">Ver catálogo completo</a>
         </div>
       </div>
     </section>
@@ -148,19 +142,52 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img class="footer-logo" src="assets/nicamerica-logo.png" alt="Nicamerica Import Corp.">
-        <p>Conectamos la tradición y calidad de Nicaragua con clientes y negocios en Estados Unidos.</p>
+        <div class="footer-logo-lockup" aria-label="Nicamerica Import Corp.">
+          <img class="footer-logo-mark" src="assets/nicamerica-isotipo-white.png" alt="">
+          <img class="footer-logo-text" src="assets/nicamerica-texto-white.png" alt="Nicamerica Import Corp.">
+        </div>
+        <p data-i18n="footer.tagline">Conectamos la tradición y calidad de Nicaragua con clientes y negocios en Estados
+          Unidos.</p>
+        <div class="footer-social" aria-label="Redes sociales">
+          <strong data-i18n="footer.social">Redes</strong>
+          <div class="footer-social-links">
+            <a class="footer-social-link" href="#" aria-label="Facebook" title="Facebook" target="_blank"
+              rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"
+                aria-hidden="true">
+                <path
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+              </svg></a>
+            <a class="footer-social-link" href="#" aria-label="Instagram" title="Instagram" target="_blank"
+              rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"
+                aria-hidden="true">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg></a>
+            <a class="footer-social-link" href="#" aria-label="TikTok" title="TikTok" target="_blank"
+              rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"
+                aria-hidden="true">
+                <path
+                  d="M12.525.02c1.31-.02 2.61-.01 3.91-.04.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+              </svg></a>
+            <a class="footer-social-link" href="https://wa.me/17869393377" aria-label="WhatsApp" title="WhatsApp"
+              target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="20"
+                height="20" aria-hidden="true">
+                <path
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.18-.48-.3z" />
+              </svg></a>
+          </div>
+        </div>
       </div>
       <nav class="footer-nav" aria-label="Navegación de pie de página">
-        <strong>Enlaces</strong>
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="contacto.html">Contacto</a>
+        <strong data-i18n="footer.links">Enlaces</strong>
+        <a href="index.html" data-i18n="nav.home">Inicio</a>
+        <a href="nosotros.html" data-i18n="nav.about">Nosotros</a>
+        <a href="catalogo.html" data-i18n="nav.catalog">Catálogo</a>
+        <a href="servicios.html" data-i18n="nav.services">Servicios</a>
+        <a href="contacto.html" data-i18n="nav.contact">Contacto</a>
       </nav>
       <div class="footer-contact">
-        <strong>Contacto</strong>
+        <strong data-i18n="footer.contact">Contacto</strong>
         <p><span class="material-symbols-outlined" aria-hidden="true">location_on</span><span>14331 SW 120 St. Unit
             #106<br>Miami, Florida 33186</span></p>
         <a href="tel:+17869393377"><span class="material-symbols-outlined" aria-hidden="true">call</span>+1 (786)
@@ -169,38 +196,6 @@
           922-4529</a>
         <a href="mailto:sales@nicamericaimport.com"><span class="material-symbols-outlined"
             aria-hidden="true">mail</span>sales@nicamericaimport.com</a>
-      </div>
-      <div class="footer-social">
-        <strong>Redes</strong>
-        <div style="display: flex; gap: 14px; margin-top: 14px;">
-          <a href="#" aria-label="Instagram" style="color: inherit;"><svg width="24" height="24" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg></a>
-          <a href="#" aria-label="LinkedIn" style="color: inherit;"><svg width="24" height="24" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-              <rect x="2" y="9" width="4" height="12"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg></a>
-          <a href="#" aria-label="Facebook" style="color: inherit;"><svg width="24" height="24" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-            </svg></a>
-          <a href="#" aria-label="YouTube" style="color: inherit;"><svg width="24" height="24" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
-              </path>
-              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-            </svg></a>
-          <a href="#" aria-label="TikTok" style="color: inherit;"><svg width="24" height="24" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-            </svg></a>
-        </div>
       </div>
     </div>
     <div class="container copyright" id="copyright"></div>
@@ -221,6 +216,7 @@
   </div>
 
   <script src="assets/app.js"></script>
+  <script>document.addEventListener('langchange', () => window.i18n.applyTranslations());</script>
 </body>
 
 </html>
