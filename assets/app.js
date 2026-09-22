@@ -114,7 +114,7 @@ const products = [
     origin: "Producto de Nicaragua",
     description: "Frijol rojo de alta calidad, cultivado en Nicaragua y seleccionado por su sabor, rendimiento, suavidad y tradición.",
     presentation: "50 lb",
-    icon: "grocery"
+    image: "assets/products/frijol-rojo-seda.jpeg"
   }
 ];
 

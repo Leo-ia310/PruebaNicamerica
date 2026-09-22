@@ -132,9 +132,64 @@
           <p class="lead" data-i18n="index.featured.lead">Una muestra de productos fotografiados para construir el catálogo. No se incluyen precios,
             disponibilidad ni afirmaciones no verificadas.</p>
         </div>
-        <div class="product-grid featured-grid" id="featuredGrid"></div>
-        <div class="section-action reveal"><a class="button primary" href="catalogo.html" data-i18n="index.featured.cta">Ver catálogo completo</a>
+        <div class="home-catalog-preview">
+          <article class="catalog-category-section reveal" id="inicio-quesos">
+            <div class="catalog-visual-panel">
+              <span class="catalog-category-label">Quesos</span>
+              <img class="catalog-main-photo" src="assets/products/queso-morolique-duro.jpg" alt="Queso nicaragüense en bloque">
+              <div class="catalog-photo-strip" aria-label="Imágenes de quesos">
+                <button class="catalog-thumb is-active" type="button" data-large-src="assets/products/queso-morolique-duro.jpg" data-large-alt="Queso nicaragüense en bloque"><img src="assets/products/queso-morolique-duro.jpg" alt="Ver queso nicaragüense en bloque"></button>
+                <button class="catalog-thumb" type="button" data-large-src="assets/products/queso-morolique-cubos.jpg" data-large-alt="Queso nicaragüense en cubos"><img src="assets/products/queso-morolique-cubos.jpg" alt="Ver queso nicaragüense en cubos"></button>
+              </div>
+            </div>
+            <div class="catalog-category-copy">
+              <h2>Quesos</h2>
+              <p>Productos lácteos tradicionales de Nicaragua, seleccionados para negocios que buscan sabor auténtico y presentación comercial confiable.</p>
+              <div class="catalog-product-stack">
+                <details class="catalog-product-info" open>
+                  <summary><span>Queso Duro Blando / Morolique</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                  <p>Queso semiduro tradicional elaborado con leche 100% de vaca semidescremada, pasteurizada.</p>
+                  <strong>Presentaciones</strong>
+                  <ul><li>Bloques 45 lb</li><li>Barras de 12 lb</li><li>Barras porcionadas (10 und)</li><li>Libras</li><li>12 oz</li></ul>
+                </details>
+                <details class="catalog-product-info">
+                  <summary><span>Queso Duro / Madurado / Frijolero / Duro Viejo</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                  <p>Queso madurado tradicional elaborado con leche 100% de vaca semidescremada.</p>
+                  <strong>Presentaciones</strong>
+                  <ul><li>Bloques 45 lb</li><li>Barras de 12 lb</li><li>Barras porcionadas (10 und)</li><li>Libras</li><li>12 oz</li></ul>
+                </details>
+                <details class="catalog-product-info">
+                  <summary><span>Quesillo / Queso para Pupusas</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                  <p>Queso fresco de pasta hilada para fundir, cremoso y de sabor natural intenso, elaborado con leche 100% de vaca semidescremada.</p>
+                  <strong>Presentaciones</strong>
+                  <ul><li>Barras de 10 lb</li><li>Barras de 5 lb</li><li>Libras</li><li>12 oz</li></ul>
+                </details>
+              </div>
+            </div>
+          </article>
+
+          <article class="catalog-category-section catalog-category-section--reverse reveal" id="inicio-granos">
+            <div class="catalog-visual-panel">
+              <span class="catalog-category-label">Granos Básicos</span>
+              <video class="catalog-main-photo catalog-main-video catalog-main-video--ambient" autoplay loop muted playsinline preload="metadata" tabindex="-1" aria-hidden="true" poster="assets/products/frijol-rojo-seda.jpeg">
+                <source src="assets/products/frijol-rojo-seda.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="catalog-category-copy">
+              <h2>Granos Básicos</h2>
+              <p>Productos esenciales para distribución, restaurantes y negocios especializados en alimentos centroamericanos.</p>
+              <div class="catalog-product-stack">
+                <details class="catalog-product-info" open>
+                  <summary><span>Frijol Rojo Seda</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+                  <p>Frijol rojo de alta calidad, cultivado en Nicaragua y seleccionado para ofrecer sabor, rendimiento, suavidad y tradición en cada plato.</p>
+                  <strong>Presentación</strong>
+                  <ul><li>50 lb</li></ul>
+                </details>
+              </div>
+            </div>
+          </article>
         </div>
+        <div class="section-action reveal"><a class="button primary" href="catalogo.html" data-i18n="index.featured.cta">Ver catálogo completo</a></div>
       </div>
     </section>
   </main>
