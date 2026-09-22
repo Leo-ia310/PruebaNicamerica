@@ -40,6 +40,10 @@ img {
   max-width: 100%;
 }
 
+body:not(.icons-ready) .material-symbols-outlined {
+  font-size: 0 !important;
+}
+
 a {
   color: inherit;
 }
@@ -5304,6 +5308,62 @@ body[data-page="servicios"] .service-card:hover {
   border-top-color: #002B7F;
   box-shadow: 0 24px 62px rgba(15, 44, 89, 0.2);
   transform: translateY(-8px);
+}
+
+/* Header icons: avoid Material Symbols ligature flash before font load. */
+.lang-toggle .lang-globe,
+.header-actions .button.primary.compact .material-symbols-outlined {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 1;
+}
+
+.lang-toggle .lang-globe::before,
+.lang-toggle .lang-globe::after,
+.header-actions .button.primary.compact .material-symbols-outlined::before,
+.header-actions .button.primary.compact .material-symbols-outlined::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+}
+
+.lang-toggle .lang-globe::before {
+  inset: 1px;
+  border: 1.8px solid currentColor;
+  border-radius: 50%;
+}
+
+.lang-toggle .lang-globe::after {
+  left: 4px;
+  right: 4px;
+  top: 8px;
+  height: 1.8px;
+  background: currentColor;
+  box-shadow: 0 -4px 0 -0.6px currentColor, 0 4px 0 -0.6px currentColor;
+}
+
+.header-actions .button.primary.compact .material-symbols-outlined::before {
+  left: 2px;
+  right: 2px;
+  top: 4px;
+  bottom: 2px;
+  border: 2px solid currentColor;
+  border-radius: 2px;
+}
+
+.header-actions .button.primary.compact .material-symbols-outlined::after {
+  left: 5px;
+  right: 5px;
+  top: 1px;
+  height: 5px;
+  border: 2px solid currentColor;
+  border-bottom: 0;
+  border-radius: 2px 2px 0 0;
 }
 
 @media (max-width: 900px) {

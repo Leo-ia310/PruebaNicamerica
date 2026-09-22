@@ -135,6 +135,17 @@ const status = document.getElementById("formStatus");
 const transparentPixel = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
 
 const currentPage = document.body.dataset.page;
+
+function markIconFontReady() {
+  document.body.classList.add("icons-ready");
+}
+
+if (document.fonts?.load) {
+  document.fonts.load('24px "Material Symbols Outlined"').then(markIconFontReady).catch(() => {});
+} else {
+  markIconFontReady();
+}
+
 document.querySelectorAll("[data-page-link]").forEach((link) => {
   if (link.dataset.pageLink === currentPage) link.setAttribute("aria-current", "page");
 });
@@ -353,6 +364,20 @@ function setupCatalogThumbs() {
   });
 }
 
+function setupAmbientVideos() {
+  document.querySelectorAll(".catalog-main-video--ambient").forEach((video) => {
+    video.controls = false;
+    video.muted = true;
+    video.loop = true;
+    video.setAttribute("tabindex", "-1");
+    video.addEventListener("contextmenu", (event) => event.preventDefault());
+    video.addEventListener("pause", () => {
+      if (!video.ended) video.play().catch(() => {});
+    });
+    video.play().catch(() => {});
+  });
+}
+
 function setupPlantCarousel() {
   document.querySelectorAll(".plant-carousel").forEach((carousel) => {
     const slides = Array.from(carousel.querySelectorAll(".plant-carousel-slide"));
@@ -392,5 +417,6 @@ renderFeatured();
 renderFilters();
 renderProducts();
 setupCatalogThumbs();
+setupAmbientVideos();
 setupPlantCarousel();
 observeReveals();
