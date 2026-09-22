@@ -5278,6 +5278,34 @@ body[data-page="catalogo"] .catalog-main-video {
   user-select: none;
 }
 
+/* Services cards: white cards with blue copy. */
+body[data-page="servicios"] .service-card {
+  color: #0F2C59;
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 44, 89, 0.16);
+  border-top: 3px solid rgba(112, 146, 176, 0.72);
+  box-shadow: 0 18px 44px rgba(3, 15, 36, 0.18);
+}
+
+body[data-page="servicios"] .service-card h3,
+body[data-page="servicios"] .service-card > span,
+body[data-page="servicios"] .service-card strong {
+  color: #0F2C59;
+}
+
+body[data-page="servicios"] .service-card p {
+  color: #526C86;
+}
+
+body[data-page="servicios"] .service-card:hover {
+  color: #0F2C59;
+  background: #FFFFFF;
+  border-color: rgba(0, 43, 127, 0.36);
+  border-top-color: #002B7F;
+  box-shadow: 0 24px 62px rgba(15, 44, 89, 0.2);
+  transform: translateY(-8px);
+}
+
 @media (max-width: 900px) {
   body[data-page="inicio"] .featured-section .catalog-category-section,
   body[data-page="inicio"] .featured-section .catalog-category-section--reverse {
