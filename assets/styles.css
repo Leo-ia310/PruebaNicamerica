@@ -5377,3 +5377,18 @@ body[data-page="servicios"] .service-card:hover {
     order: initial;
   }
 }
+
+
+/* Capa sutil negra en fondos de heros */
+.page-hero::before,
+.page-hero::after,
+.hero::before,
+.hero::after,
+.hero-home::before,
+.hero-home::after,
+.hero-slide::before,
+.hero-slide::after,
+.hero-visual::after {
+  background: rgba(0, 0, 0, 0.4) !important;
+  display: block !important;
+}
