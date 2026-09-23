@@ -25,7 +25,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Plus Jakarta Sans", Arial, sans-serif;
+  font-family: var(--font-body);
   color: var(--ink);
   background: var(--white);
   line-height: 1.65;
@@ -110,10 +110,11 @@ textarea {
 h1,
 h2,
 h3 {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--font-display);
   line-height: 1.08;
   color: var(--primary);
   margin: 0;
+  font-weight: 700;
 }
 
 h1 {
@@ -454,8 +455,9 @@ form,
 }
 
 .value-card h2 {
-  font-family: "Plus Jakarta Sans", Arial, sans-serif;
+  font-family: var(--font-display);
   font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .value-card p,
@@ -552,9 +554,10 @@ form,
 .info-card h3,
 .service-card h3,
 .catalog-cta h3 {
-  font-family: "Plus Jakarta Sans", Arial, sans-serif;
+  font-family: var(--font-display);
   color: var(--primary);
   font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .featured-section,
@@ -611,9 +614,10 @@ form,
 }
 
 .product-body h3 {
-  font-family: "Plus Jakarta Sans", Arial, sans-serif;
+  font-family: var(--font-display);
   color: var(--ink);
   font-size: 1rem;
+  font-weight: 700;
   line-height: 1.3;
 }
 
@@ -742,8 +746,9 @@ form,
 }
 
 .contact-card h3 {
-  font-family: "Plus Jakarta Sans", Arial, sans-serif;
+  font-family: var(--font-display);
   color: var(--primary);
+  font-weight: 700;
 }
 
 .contact-card strong {
@@ -3559,7 +3564,17 @@ body[data-page="inicio"] .value-card-img--support {
 }
 
 /* Nicaragua blue palette refresh. */
+@font-face {
+  font-family: "Nueva Std Bold";
+  src: url("fonts/nueva-std-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
+  --font-display: "Nueva Std Bold", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", Arial, sans-serif;
   --primary: #0F2C59;
   --secondary: #002B7F;
   --accent: #7092B0;
@@ -4607,11 +4622,108 @@ textarea::placeholder {
   position: absolute;
   inset: var(--home-header-height) 0 0;
   z-index: -2;
-  background-image: url("plant/plant-production.jpg");
+  overflow: hidden;
+  background: var(--home-navy-deep);
+}
+
+.hero-home .hero-carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: homeHeroCarousel 48s infinite cubic-bezier(0.65, 0, 0.35, 1);
+  will-change: transform;
+}
+
+.hero-home .hero-carousel-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center 48%;
   background-repeat: no-repeat;
-  transform: scale(1.001);
+}
+
+.hero-home .hero-carousel-slide--pour {
+  background-image: url("plant/hero-plant-pour.jpg");
+}
+
+.hero-home .hero-carousel-slide--curd {
+  background-image: url("plant/hero-plant-curd.jpg");
+}
+
+.hero-home .hero-carousel-slide--team {
+  background-image: url("plant/hero-plant-team.jpg");
+}
+
+.hero-home .hero-carousel-slide--process {
+  background-image: url("plant/hero-plant-process.jpg");
+}
+
+.hero-home .hero-carousel-slide--cheese {
+  background-image: url("plant/hero-plant-cheese.jpg");
+}
+
+.hero-home .hero-carousel-slide--water {
+  background-image: url("plant/hero-plant-water.jpg");
+}
+
+.hero-home .hero-carousel-slide--control {
+  background-image: url("plant/hero-plant-control.jpg");
+}
+
+.hero-home .hero-carousel-slide--table {
+  background-image: url("plant/hero-plant-table.jpg");
+}
+
+@keyframes homeHeroCarousel {
+  0%,
+  8% {
+    transform: translateX(0);
+  }
+
+  11%,
+  19% {
+    transform: translateX(-100%);
+  }
+
+  22%,
+  30% {
+    transform: translateX(-200%);
+  }
+
+  33%,
+  41% {
+    transform: translateX(-300%);
+  }
+
+  44%,
+  52% {
+    transform: translateX(-400%);
+  }
+
+  55%,
+  63% {
+    transform: translateX(-500%);
+  }
+
+  66%,
+  74% {
+    transform: translateX(-600%);
+  }
+
+  77%,
+  85% {
+    transform: translateX(-700%);
+  }
+
+  88%,
+  99.99% {
+    transform: translateX(-800%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .hero-home::after {
@@ -4662,11 +4774,11 @@ textarea::placeholder {
   max-width: 900px;
   margin: 0;
   color: #fff;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--font-display);
   font-size: clamp(3.15rem, 6vw, 5.1rem);
-  font-weight: 500;
+  font-weight: 700;
   line-height: 0.98;
-  letter-spacing: -0.035em;
+  letter-spacing: 0;
   text-wrap: balance;
 }
 
@@ -4674,8 +4786,8 @@ textarea::placeholder {
   display: block;
   margin-top: 5px;
   color: var(--home-accent-strong);
-  font-style: italic;
-  font-weight: 500;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .hero-home .hero-copy .lead {
